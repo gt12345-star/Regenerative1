@@ -1946,7 +1946,7 @@ html.js .st-list.fit li:nth-child(n+9){display:none}
 .letter::before{content:"";position:absolute;left:clamp(22px,4.6vw,64px);top:0;width:64px;height:5px;border-radius:0 0 5px 5px;background:linear-gradient(90deg,var(--eosin),var(--violet))}
 .letter-hi{font-weight:560;font-size:1.02rem;color:#596C8B;margin-bottom:14px}
 .letter-h{font-weight:640;font-size:clamp(1.7rem,3.3vw,2.55rem);line-height:1.08;letter-spacing:-.036em;color:var(--ink);margin-bottom:clamp(18px,2.2vw,26px);text-wrap:balance}
-.letter p{font-size:clamp(1.04rem,1.2vw,1.16rem);line-height:1.62;color:#1C3D3D}
+.letter p{font-size:clamp(1.1rem,1.3vw,1.22rem);line-height:1.62;color:#1C3D3D}
 .letter p+p{margin-top:1.05em}
 .letter .turn{font-weight:640;font-size:clamp(1.2rem,1.7vw,1.42rem);line-height:1.2;letter-spacing:-.024em;color:var(--ink);margin-top:1.5em}
 .letter .turn+p{margin-top:.6em}
@@ -2072,6 +2072,9 @@ html.js .st-list.fit li:nth-child(n+9){display:none}
 .mk-note{margin-top:20px;font-size:.92rem;line-height:1.5;color:rgba(255,255,255,.8);max-width:46em}
 @media (max-width:1000px){.mk{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.mk{grid-template-columns:1fr}.mk b{font-size:2.1rem}}
+
+/* v22: a no-risk line under the hero buttons */
+.hero-note{margin-top:14px;font-size:.94rem;line-height:1.4;color:rgba(255,255,255,.78)}
 
 
 /* ---------- colour scheme: navy, crimson, deep teal and pink ---------- */
