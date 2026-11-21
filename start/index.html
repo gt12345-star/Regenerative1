@@ -96,15 +96,13 @@ legend{padding:0;margin:14px 0 2px;font-weight:620;font-size:1.02rem;letter-spac
 .band h2{font-size:clamp(1.8rem,3.6vw,2.7rem)}
 .band h2 b{font-weight:inherit;color:var(--pink2)}
 .lede{margin-top:12px;max-width:36em;font-size:1.1rem;color:var(--ink2)}
-.day{list-style:none;padding:0;margin-top:30px;display:grid;gap:22px;border-left:2px solid var(--line)}
-.day li{position:relative;padding-left:24px}
-.day li::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;border-radius:50%;background:var(--pink2);box-shadow:0 0 0 5px #FFFFFF}
-.day b{display:block;font-weight:640;font-size:1.7rem;letter-spacing:-.045em;line-height:1;font-variant-numeric:tabular-nums;color:var(--pink2)}
-.day li.doc::before{background:var(--violet)}
-.day li.doc b{color:var(--violet)}
-.day p{margin-top:8px;font-size:1rem;line-height:1.45;color:var(--ink2)}
-.day li:last-child p{font-weight:620;color:var(--ink)}
-@media(min-width:900px){.day{grid-template-columns:repeat(5,minmax(0,1fr));gap:0;border-left:0;border-top:2px solid var(--line)}.day li{padding:22px 20px 0 0}.day li::before{left:0;top:-7px}}
+.gain{list-style:none;padding:0;margin-top:28px;display:grid;gap:14px}
+@media(min-width:700px){.gain{grid-template-columns:1fr 1fr}}
+@media(min-width:1040px){.gain{grid-template-columns:repeat(4,minmax(0,1fr))}}
+.gain li{display:flex;flex-direction:column;padding:22px 20px;border-radius:18px;background:var(--paper);box-shadow:inset 0 0 0 1px var(--line)}
+.gain h3{font-size:1.16rem;line-height:1.2;letter-spacing:-.025em;color:var(--ink)}
+.gain p{margin-top:8px;font-size:1rem;line-height:1.45;color:var(--ink2)}
+.gain span{margin-top:auto;padding-top:12px;font-size:.78rem;line-height:1.4;color:var(--ink2)}
 .done{margin-top:28px;display:grid;gap:22px;align-items:center}
 @media(min-width:880px){.done{grid-template-columns:1.05fr .95fr}}
 .done ul{list-style:none;padding:0;display:grid;gap:10px}
@@ -181,7 +179,7 @@ footer.foot{padding:30px 0 96px;background:#030B1D;color:#97A8C4;font-size:.8rem
 .letter h3+p{margin-top:.55em}
 .letter .btn{margin-top:1.7em}
 .letter .ps{margin-top:1.7em;padding-top:1.3em;border-top:1px solid var(--line);color:var(--ink2)}
-html[data-v="short"] .s-why,html[data-v="short"] .s-done,html[data-v="letter"] .s-why{display:none}
+html[data-v="short"] .s-gain,html[data-v="short"] .s-done,html[data-v="letter"] .s-gain{display:none}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}}
 @media print{.dock,.draft{display:none}}
 </style>
@@ -197,7 +195,7 @@ html[data-v="short"] .s-why,html[data-v="short"] .s-done,html[data-v="letter"] .
   <div class="wrap hero-grid" style="margin-top:clamp(26px,4vw,48px)">
     <div>
       <h1>Wanted: a non-doctor partner to operate a <span class="nb">stem cell</span> clinic <b>in your city.</b></h1>
-      <p class="deck">The doctors are in place. So are the legal structure, the products, the training and a platform that answers your phone at midnight. What they need is someone who can run a business.</p>
+      <p class="deck">The clinicians are in place. So are the legal structure, the products, the training and a platform that answers your phone at midnight. You own the business, with your name on the sign.</p>
       <ul class="checks">
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="m8 12.4 2.7 2.7L16.2 9.5"/></svg><span>Licensed clinicians already in place</span></li>
         <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9.2"/><path d="m8 12.4 2.7 2.7L16.2 9.5"/></svg><span>Compliance built for your state</span></li>
@@ -273,13 +271,15 @@ html[data-v="short"] .s-why,html[data-v="short"] .s-done,html[data-v="letter"] .
     <div class="letter">
       <p>Take a drive through your town this week.</p>
       <p>You will pass the signs. Wellness. Longevity. Anti-aging. Stem cells. Two years ago that corner unit sold phones. Today the parking lot is full by nine in the morning, and no insurance company sent a single one of those cars. The people inside are paying out of their own pockets.</p>
-      <h3>Here is what the sign does not tell you.</h3>
-      <p>The person who owns that business is often not a doctor.</p>
-      <p>A physician spends the better part of a decade learning medicine. In all that time, almost nobody teaches them how to sign a lease, hire a front desk, run an advertisement or fill a calendar. Most have no wish to learn. They want to see patients.</p>
-      <p>So someone else runs the business. Someone who has made payroll in a slow month, kept customers coming back and built a team that stays. Someone like you.</p>
-      <h3>What stops everyone who tries this alone</h3>
+      <h3>One of those offices could be yours.</h3>
+      <p>You do not need a medical license to own one. You own the business, and licensed clinicians handle the medicine.</p>
+      <h3>What stops most people who try</h3>
       <p>First come the healthcare attorneys, because the law decides who may own what. Then the search for a physician willing to supervise and a clinician trained to do the procedures. Then a supplier you can trust, a way to answer every call, and advertising that keeps everyone out of trouble. A year goes by, and so does a small fortune. Some never open at all.</p>
-      <p>Here, all of that is already done. The structure is set up for your state before you open. The clinicians are in place. The products, the training, the software and the marketing are finished and waiting.</p>
+      <h3>Here, all of it is handed to you.</h3>
+      <p>Your company is set up for your state by healthcare attorneys. Physician oversight is in place before you open, and your supervising physician is named in writing. A nurse practitioner performs the procedures at your office, with a staffing network behind that hire.</p>
+      <p>You order from a catalog of more than 20 biologics at partner pricing. Your clinician is trained to perform the procedures, and you and your team are trained to hold the consultations. You choose the name, your website is drafted for you, and an assistant answers your phone, your texts and your website day and night.</p>
+      <h3>What that gives you</h3>
+      <p>You own the business. The name on the sign is yours, the company is yours, and the accounts are in your company's name. You open with the hard part finished, in a market where people pay for their own care.</p>
       <h3>Your part</h3>
       <p>You open the office and hire a small team. You run the local advertising, sit down with the people who come in and keep the calendar full. You never diagnose anyone, choose a product or decide who is a candidate. Licensed clinicians do all of it. You are the owner all day, and never once the doctor.</p>
       <h3>The price, and the catch</h3>
@@ -288,22 +288,20 @@ html[data-v="short"] .s-why,html[data-v="short"] .s-done,html[data-v="letter"] .
       <h3>So do this today.</h3>
       <p>Answer the <span data-qn>four</span> questions on this page. It takes about a minute, costs nothing and commits you to nothing. Then pick a time for a thirty-minute call, and bring every question you have. Nothing is signed and nothing is paid until you hold the full disclosure in writing and the waiting period the law requires has passed.</p>
       <a class="btn" href="#apply"><span>See if I qualify</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-      <p class="ps">P.S. The doctors have their side built. The seats still empty are the owners', and there are only so many of them. Find out whether one is still yours to take.</p>
+      <p class="ps">P.S. Everything on this page is built and waiting. What it needs is an owner, and there are only so many partnerships to place. Find out whether one is still yours to take.</p>
     </div>
   </div>
 </section>
 
-<section class="band white s-why">
+<section class="band white s-gain">
   <div class="wrap">
-    <h2>Why a doctor wants a partner <b>who is not a doctor</b></h2>
-    <p class="lede">Medical school teaches medicine. It does not teach how to sign a lease, hire a front desk, run an advertisement or fill a calendar. That side is yours. Here is one ordinary Tuesday.</p>
-    <ol class="day">
-      <li><b>8:30 am</b><p>You unlock the door. The assistant took the night's calls, and today's consultations are already on the calendar.</p></li>
-      <li class="doc"><b>9:00 am</b><p>A new patient sits down for an evaluation. Your nurse practitioner takes it from there.</p></li>
-      <li><b>Noon</b><p>A couple who called yesterday sit down with you. You walk them through the options and the price.</p></li>
-      <li><b>3:00 pm</b><p>A patient settles into the red light chamber. At the front desk, you reorder product in a few clicks.</p></li>
-      <li><b>5:30 pm</b><p>You lock up, and the assistant takes the phones. You were the owner all day, and never once the doctor.</p></li>
-    </ol>
+    <h2>What this <b>gives you</b></h2>
+    <ul class="gain">
+      <li><h3>A business you own</h3><p>Your name is on the sign. The company is yours, and so is every account, in your company's name.</p></li>
+      <li><h3>A head start</h3><p>You open with the legal structure, the clinicians, the products and the training already in place.</p></li>
+      <li><h3>An office that answers at midnight</h3><p>An assistant takes your calls, your texts and your website visitors day and night, and books the consultations.</p></li>
+      <li><h3>A market that is still growing</h3><p>The wellness economy reached $7.5 trillion in 2025, up 8.9 percent in a year.</p><span>Source: Global Wellness Institute, 2026.</span></li>
+    </ul>
   </div>
 </section>
 
@@ -432,10 +430,10 @@ var SETTINGS = {
     b: "Doctor seeking non-doctor partner to operate a stem cell clinic{in state}.",
     c: "Not a doctor? Good. A doctor is looking for a partner like you.",
     d: "The doctors are in place. The clinic needs an owner.",
-    e: "Why a doctor would go looking for a partner who is not a doctor.",
-    f: "Medical school never taught them how to run a business. That job is open.",
+    e: "You have never run a stem cell clinic. You get a playbook built over more than eight years.",
+    f: "Here is what the non-doctor partner gets.",
     g: "Everything a stem cell clinic needs is already built. Except the owner.",
-    i: "You were the owner all day, and never once the doctor.",
+    i: "Own the clinic. Never be the doctor.",
     j: "Run a business? Never worn a white coat? A doctor wants to talk to you.",
     k: { text: "The wellness economy is $7.5 trillion. You do not need a medical license to own a business in it.", source: "Global wellness economy, 2025. Source: Global Wellness Institute." },
     l: "A limited number of partnerships. When the last one is placed, we stop.",
@@ -462,7 +460,7 @@ var SETTINGS = {
   var LAYOUTS = {
     'short': {},
     'list': { h1: 'Everything a stem cell clinic needs is already built. <b>Except the owner.</b>', deck: 'The physician, the legal structure, the clinician network, the products, the training and the platform are in place. A non-doctor partner is wanted to open the office and run it.' },
-    'letter': { h1: 'Why a doctor would go looking for someone <b>who is not a doctor</b>', deck: 'A short letter for people who have run a business and never worn a white coat. Read it, then see if you qualify.' }
+    'letter': { h1: 'Own a stem cell business <b>that is already built</b>', deck: 'A short letter about what a partner is handed, what a partner owns and what it costs. Read it, then see if you qualify.' }
   };
   var h1 = $('#page1 h1'), deck = $('#page1 .deck');
   var vk = String(qs.get('v') || S.variant || '').toLowerCase().slice(0, 12);
@@ -470,7 +468,7 @@ var SETTINGS = {
   if (vk) {
     document.documentElement.setAttribute('data-v', vk); utm.variant = vk;
     if (LAYOUTS[vk].h1) { h1.innerHTML = LAYOUTS[vk].h1; deck.textContent = LAYOUTS[vk].deck; }
-    if (vk === 'list') { var dn = $('.s-done'), wy = $('.s-why'); if (dn && wy) wy.parentNode.insertBefore(dn, wy); }
+    if (vk === 'list') { var dn = $('.s-done'), wy = $('.s-gain'); if (dn && wy) wy.parentNode.insertBefore(dn, wy); }
     if (vk === 'letter') $('#letter').hidden = false;
   }
   var sk = String(qs.get('s') || '').toUpperCase().slice(0, 2), so = /^[A-Z]{2}$/.test(sk) ? $('#state option[value="' + sk + '"]') : null;

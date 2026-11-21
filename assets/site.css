@@ -2062,6 +2062,17 @@ html.js .st-list.fit li:nth-child(n+9){display:none}
 .hub-grid.nomap .hub-left{max-width:720px}
 .hub-grid.nomap .claim-w{max-width:560px}
 
+/* v20: the market, in sourced figures (home, on the dark band) */
+.mk{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:clamp(12px,1.5vw,20px);list-style:none;margin:clamp(26px,3vw,40px) 0 0;padding:0}
+.mk li{display:flex;flex-direction:column;padding:clamp(20px,2.1vw,28px);border-radius:20px;background:rgba(255,255,255,.06);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16)}
+.mk b{font-weight:620;font-size:clamp(2rem,3.2vw,2.9rem);line-height:1;letter-spacing:-.05em;color:#FFFFFF}
+.mk li:first-child b{color:var(--eosin-b)}
+.mk p{margin-top:14px;font-size:1rem;line-height:1.45;color:rgba(255,255,255,.92)}
+.mk span{margin-top:auto;padding-top:16px;font-size:.8rem;line-height:1.4;color:rgba(255,255,255,.68)}
+.mk-note{margin-top:20px;font-size:.92rem;line-height:1.5;color:rgba(255,255,255,.8);max-width:46em}
+@media (max-width:1000px){.mk{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.mk{grid-template-columns:1fr}.mk b{font-size:2.1rem}}
+
 
 /* ---------- colour scheme: navy, crimson, deep teal and pink ---------- */
 .band.numbers{background:linear-gradient(112deg,#0A2348 0%,#0C3F63 40%,#0E5F66 76%,#0F6E6C 100%)}
