@@ -161,6 +161,21 @@ footer.foot{padding:30px 0 96px;background:#030B1D;color:#97A8C4;font-size:.8rem
 .stage2 .head{max-width:760px}
 .stage2 h1{font-size:clamp(2rem,4.6vw,3.3rem)}
 .stage2 .deck{max-width:38em}
+.p2x{display:flex;flex-wrap:wrap;gap:14px;margin-top:22px}
+.hostcard,.callnow{display:flex;align-items:center;gap:16px;padding:15px 20px;border-radius:18px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+.hostcard img{flex:none;width:62px;height:62px;border-radius:50%;object-fit:cover;background:rgba(255,255,255,.12)}
+.hc-k{font-size:.82rem;color:rgba(255,255,255,.72)}
+.hc-n{font-weight:640;font-size:1.12rem;letter-spacing:-.015em}
+.hc-t{font-size:.9rem;color:rgba(255,255,255,.8)}
+.callnow{flex-wrap:wrap;justify-content:space-between;flex:1;min-width:min(100%,300px)}
+.callnow p{font-size:1rem;line-height:1.4}
+.callnow b{display:block;font-weight:640;font-size:1.08rem}
+.callnow .btn{min-height:50px;white-space:nowrap}
+.s-video{background:var(--bg);color:#FFFFFF;padding:clamp(40px,5.6vw,76px) 0}
+.s-video h2{color:#FFFFFF}
+.s-video .lede{color:rgba(255,255,255,.8)}
+.vid{position:relative;margin-top:26px;border-radius:22px;overflow:hidden;background:#040913;box-shadow:0 40px 80px -34px rgba(1,6,15,.9),inset 0 0 0 1px rgba(255,255,255,.12);aspect-ratio:16/9}
+.vid video{display:block;width:100%;height:100%;object-fit:cover}
 .cal{margin-top:26px;border-radius:22px;background:#FFFFFF;color:var(--ink);overflow:hidden;box-shadow:0 40px 80px -30px rgba(1,6,15,.7)}
 .cal .calendly-inline-widget{min-width:300px;height:720px}
 .cal .empty{padding:44px 26px;text-align:center}
@@ -265,6 +280,14 @@ html[data-v="short"] .s-gain,html[data-v="short"] .s-done,html[data-v="letter"] 
     </div>
   </div>
 </header>
+
+<section class="s-video" id="video" hidden>
+  <div class="wrap">
+    <h2>Watch the <b>overview</b></h2>
+    <p class="lede" id="video-lede">Ninety seconds on what you would own, what the clinicians do and what is handed to you.</p>
+    <div class="vid"><video id="video-el" controls playsinline preload="none"></video></div>
+  </div>
+</section>
 
 <section class="band white s-letter" id="letter" hidden>
   <div class="wrap">
@@ -376,8 +399,12 @@ html[data-v="short"] .s-gain,html[data-v="short"] .s-done,html[data-v="letter"] 
     <span class="brand"><svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14.2" fill="none" stroke="#FFFFFF" stroke-width="2.6"/><circle cx="20" cy="20" r="5.4" fill="#FF4E88"/></svg><span data-brand>Regenerative Business Partner Program</span></span>
     <div class="head" style="margin-top:clamp(26px,4vw,44px)">
       <p class="eyebrow">Step 2 of 2</p>
-      <h1 id="p2-h" tabindex="-1">Thank you<span id="p2-name"></span>. Now pick a time for your call.</h1>
+      <h1 id="p2-h" tabindex="-1">Thank you<span id="p2-name"></span>. <span id="p2-tail">Now pick a time for your call.</span></h1>
       <p class="deck">Thirty minutes, by phone. We will tell you whether a partnership is available and walk you through what the investment covers.</p>
+    </div>
+    <div class="p2x" id="p2x" hidden>
+      <div class="hostcard" id="hostcard" hidden><img id="host-photo" alt="" hidden><div><p class="hc-k">Your call is with</p><p class="hc-n" id="host-name"></p><p class="hc-t" id="host-title"></p></div></div>
+      <div class="callnow" id="callnow" hidden><p><b>Rather talk now?</b>We are at our desks.</p><a class="btn" id="callnow-a" href="#"><span>Call <span id="callnow-n"></span></span></a></div>
     </div>
     <div class="cal" id="cal"></div>
     <p class="after">After you book, you will be taken to the main website. <a id="skip" href="#">Go there now</a></p>
@@ -415,6 +442,11 @@ var SETTINGS = {
   legalName: "",                  // optional. Leave blank to show no company name. If your attorney wants the company named in the consent line and the footer, put it here.
   mainSite: "../",   // where people go after they book (and where the policy links point)
   calendlyUrl: "",                // the booking page, for example "https://calendly.com/your-name/partner-call"
+  callNowPhone: "",               // a phone number shown to people who qualify, for example "+17025550123". Blank shows no call button.
+  callNowHours: null,             // when the call button shows, for example { tz: "America/Los_Angeles", days: [1,2,3,4,5], from: 9, to: 17 }. null shows it at all hours.
+  host: { name: "", title: "", photo: "" },   // who the call is with. With a name filled in, the booking screen says so (and shows the photo, if there is one).
+  videoUrl: "",                   // the address of the overview video (an mp4 file). Blank shows no video.
+  videoPoster: "",                // the still picture shown before the video plays
   formEndpoint: "",               // where the answers are sent: a GoHighLevel inbound webhook, Zapier, Make, Formspree...
   formFormat: "form",             // "form" works with almost any endpoint. Use "json" if the endpoint asks for JSON and allows browser requests.
   metaPixelId: "",                // the Meta Pixel ID, numbers only
@@ -607,8 +639,33 @@ var SETTINGS = {
   function swap(id) { $('#page1').hidden = true; dock.classList.remove('on'); $('#page2').hidden = id !== 2; $('#page3').hidden = id !== 3; window.scrollTo(0, 0); var h = $(id === 2 ? '#p2-h' : '#p3-h'); if (h) h.focus({ preventScroll: true }); }
   function after() { return main + (main.indexOf('?') < 0 ? '?' : '&') + 'booked=1'; }
   function showThanks(a) { $('#p3-name').textContent = a.first_name ? ', ' + a.first_name : ''; $('#learn').href = main; swap(3); }
+  /* Is the office open? The hours are read in the office's own time zone, wherever the visitor is. */
+  function openNow(h) {
+    if (!h) return true;
+    try {
+      var parts = new Intl.DateTimeFormat('en-US', { timeZone: h.tz, weekday: 'short', hour: 'numeric', hour12: false }).formatToParts(new Date()), wd = '', hr = -1;
+      parts.forEach(function (p) { if (p.type === 'weekday') wd = p.value; if (p.type === 'hour') hr = Number(p.value) % 24; });
+      var d = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].indexOf(wd);
+      return (h.days || [1, 2, 3, 4, 5]).indexOf(d) >= 0 && hr >= Number(h.from) && hr < Number(h.to);
+    } catch (x) { return false; }
+  }
+  function prettyPhone(p) { var d = String(p).replace(/[^0-9]/g, ''); if (d.length === 11 && d.charAt(0) === '1') d = d.slice(1); return d.length === 10 ? '(' + d.slice(0, 3) + ') ' + d.slice(3, 6) + '-' + d.slice(6) : String(p); }
+  function bookingExtras() {
+    var any = false, H = S.host || {};
+    if (H.name) {
+      $('#host-name').textContent = H.name; $('#host-title').textContent = H.title || '';
+      var ph = $('#host-photo'); if (H.photo) { ph.src = H.photo; ph.alt = H.name; ph.hidden = false; }
+      $('#hostcard').hidden = false; any = true;
+    }
+    if (S.callNowPhone && openNow(S.callNowHours)) {
+      var c = $('#callnow-a'); c.href = 'tel:' + String(S.callNowPhone).replace(/[^+0-9]/g, ''); $('#callnow-n').textContent = prettyPhone(S.callNowPhone);
+      c.addEventListener('click', function () { if (window.fbq) fbq('trackCustom', 'CallNowClick'); });
+      $('#callnow').hidden = false; $('#p2-tail').textContent = 'Call now, or pick a time for your call.'; any = true;
+    }
+    $('#p2x').hidden = !any;
+  }
   function showBooking(a) {
-    $('#p2-name').textContent = a.first_name ? ', ' + a.first_name : ''; $('#skip').href = main;
+    $('#p2-name').textContent = a.first_name ? ', ' + a.first_name : ''; $('#skip').href = main; bookingExtras();
     var cal = $('#cal');
     if (!S.calendlyUrl) {
       cal.innerHTML = '<div class="empty"><h2>The booking calendar goes here</h2><p>Add the Calendly link to the settings at the bottom of this file and the calendar will appear in this box. After someone books, they are sent on to the main website.</p><a class="btn" href="' + esc(main) + '"><span>Continue to the main website</span></a></div>';
@@ -634,7 +691,13 @@ var SETTINGS = {
     fbq('track', 'Schedule');
     setTimeout(function () { location.href = after(); }, 1500);
   });
-  window.ADLP = { showBooking: showBooking, showThanks: showThanks, after: after };      /* for testing */
+  if (S.videoUrl) {
+    var vs = $('#video'), ve = $('#video-el');
+    ve.src = S.videoUrl; if (S.videoPoster) ve.poster = S.videoPoster;
+    ve.addEventListener('play', function () { if (window.fbq && !ve._seen) { ve._seen = 1; fbq('trackCustom', 'OverviewVideoPlay'); } });
+    vs.hidden = false;
+  }
+  window.ADLP = { showBooking: showBooking, showThanks: showThanks, after: after, openNow: openNow };      /* for testing */
 })();
 </script>
 <script>document.documentElement.classList.remove('pre')</script>
