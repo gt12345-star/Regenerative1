@@ -284,7 +284,7 @@ html[data-v="short"] .s-gain,html[data-v="short"] .s-done,html[data-v="letter"] 
 <section class="s-video" id="video" hidden>
   <div class="wrap">
     <h2>Watch the <b>overview</b></h2>
-    <p class="lede" id="video-lede">Ninety seconds on what you would own, what the clinicians do and what is handed to you.</p>
+    <p class="lede" id="video-lede">Seventy seconds on what you would own, what the clinicians do and what is handed to you. It is captioned, so it works with the sound off.</p>
     <div class="vid"><video id="video-el" controls playsinline preload="none"></video></div>
   </div>
 </section>
@@ -445,8 +445,8 @@ var SETTINGS = {
   callNowPhone: "",               // a phone number shown to people who qualify, for example "+17025550123". Blank shows no call button.
   callNowHours: null,             // when the call button shows, for example { tz: "America/Los_Angeles", days: [1,2,3,4,5], from: 9, to: 17 }. null shows it at all hours.
   host: { name: "", title: "", photo: "" },   // who the call is with. With a name filled in, the booking screen says so (and shows the photo, if there is one).
-  videoUrl: "",                   // the address of the overview video (an mp4 file). Blank shows no video.
-  videoPoster: "",                // the still picture shown before the video plays
+  videoUrl: "../assets/video/partnership-overview.mp4",                   // the address of the overview video (an mp4 file). Blank shows no video.
+  videoPoster: "../assets/video/partnership-overview-poster.jpg",                // the still picture shown before the video plays
   formEndpoint: "",               // where the answers are sent: a GoHighLevel inbound webhook, Zapier, Make, Formspree...
   formFormat: "form",             // "form" works with almost any endpoint. Use "json" if the endpoint asks for JSON and allows browser requests.
   metaPixelId: "",                // the Meta Pixel ID, numbers only
