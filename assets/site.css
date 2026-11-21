@@ -2056,6 +2056,12 @@ html.js .st-list.fit li:nth-child(n+9){display:none}
 .booked button{flex:none;border:0;border-radius:999px;padding:10px 18px;font:inherit;font-weight:620;color:#FFFFFF;background:var(--eosin);cursor:pointer}
 .booked button:hover{background:var(--eosin-d)}
 
+/* v18: the map is gone. The qualify card stands on its own under the hero, and the state hub is one column. */
+.hero-home .hero-top{padding-bottom:clamp(34px,4.6vw,64px)}
+.hero-hub>.wrap.hub-grid.nomap{display:block}
+.hub-grid.nomap .hub-left{max-width:720px}
+.hub-grid.nomap .claim-w{max-width:560px}
+
 
 /* ---------- colour scheme: navy, crimson, deep teal and pink ---------- */
 .band.numbers{background:linear-gradient(112deg,#0A2348 0%,#0C3F63 40%,#0E5F66 76%,#0F6E6C 100%)}
