@@ -321,6 +321,18 @@ html.bul .cal .empty p{color:#333}
 html.bul .after{color:#E1ECF9}
 html.bul .s-video{background:var(--navy)}
 html.bul .vid{background:#000;border:3px solid #fff}
+
+/* REFINEMENT (November 24): a deeper blue, cooler paper, lighter rules, a calmer form */
+html.bul{--blue:#17529A;--blue-d:#103F7A;--red:#B8102A;--paper2:#F3F6FA;--tint-b:#E8F0F9;--rule:#CBD2DB}
+html.bul h1,html.bul h2,html.bul h3{letter-spacing:-.02em}
+html.bul .btn,html.bul .fld input,html.bul .fld select,html.bul .opts label{border-radius:4px!important}
+html.bul .btn{border-color:#960C22;border-bottom-width:2px}
+html.bul .top{border-bottom-width:3px}
+html.bul .card{border-top:8px solid var(--blue);outline:1px solid var(--rule);box-shadow:0 22px 46px -30px rgba(14,42,82,.55)!important}
+html.bul .cal{border-top:8px solid var(--blue);outline:0}
+html.bul .gain,html.bul .done ul,html.bul .steps,html.bul .rev,html.bul .letter{border-color:var(--rule)}
+html.bul .invest{background:#FFEC8A}
+html.bul .band{padding:clamp(48px,6.2vw,84px) 0}
 @media(max-width:939px){html.bul .hero-grid{gap:22px}}
 </style>
 </head>
