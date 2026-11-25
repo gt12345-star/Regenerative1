@@ -2264,7 +2264,7 @@ html.js .st-list.fit li:nth-child(n+9){display:none}
 .bul .brand *{animation:none!important}
 .bul .split .w,.bul .split .w>span{transform:none!important;opacity:1!important;transition:none!important}
 .bul [data-r],.bul [data-in],.bul [data-stagger]>*{opacity:1!important;transform:none!important;translate:none!important;scale:none!important;transition:none!important}
-.bul *:not(.cham-photo):not(.pick):not(.ckb):not(.play):not(.hero):not(.band):not(footer),.bul *::before,.bul *::after{background-image:none!important}
+.bul *:not(.cham-photo):not(.pick):not(.ckb):not(.play):not(.hero):not(.band):not(footer):not(.fx),.bul *::before,.bul *::after{background-image:none!important}
 
 /* ---------- type ---------- */
 .bul body{background:#fff;color:var(--body);font-family:var(--serif);font-size:1.125rem;line-height:1.55;font-weight:400;letter-spacing:0}
