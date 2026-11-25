@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en" class="bul" data-theme="bulletin"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brand Style Sheet</title>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+body{margin:0}
+.rw{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.rhead{background:var(--blue);color:#fff;border-bottom:6px solid var(--navy);padding:clamp(24px,3.4vw,44px) 0}
+.rhead p.k{font:900 .86rem/1.2 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+.rhead h1{color:#fff;font:900 clamp(2rem,4.4vw,3.6rem)/1 var(--sans);letter-spacing:-.03em;margin:0;max-width:18em}
+.rhead p.d{font:700 clamp(1.08rem,1.5vw,1.3rem)/1.36 var(--sans);color:#fff;margin:14px 0 0;max-width:46em}
+.rnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.rnav a{font:900 .98rem/1 var(--sans);color:var(--navy);background:#fff;text-decoration:none;padding:11px 15px;border:2px solid var(--navy)}
+.rnav a:hover{background:var(--tint-y)}
+.rsec{padding:clamp(30px,4.2vw,54px) 0;border-top:1px solid var(--line)}
+.rsec.alt{background:var(--paper2)}
+.rsec h2{font:900 clamp(1.6rem,3vw,2.4rem)/1.05 var(--sans);letter-spacing:-.026em;color:var(--blue);margin:0}
+.rsec h2 b{color:var(--red)}
+.rsec>.rw>p.d{font:700 1.12rem/1.4 var(--sans);color:#151515;margin:10px 0 0;max-width:48em}
+.rsec p{max-width:52em}
+.bul a.go{display:inline-block;font:900 .95rem/1 var(--sans);text-decoration:none;color:#fff;background:var(--red);border:2px solid #8F0A20;border-bottom-width:4px;padding:11px 14px;white-space:nowrap}
+.bul a.go:hover{background:#DD1F3F}
+.bul a.go.b{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.bul a.go.b:hover{background:var(--tint-b)}
+.bul .rnav a{color:var(--navy)}
+
+.sws{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin-top:20px}
+.sw .chip{height:96px;display:flex;align-items:flex-end;padding:8px 10px;font:900 .95rem/1 var(--sans);border:1px solid #7E7E7E}
+.sw p{font:500 .95rem/1.35 var(--sans);color:#333;margin:8px 0 0}
+.sw p b{display:block;color:#111;font-weight:900}
+.ty{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border:1px solid #7E7E7E;background:#fff;margin-top:20px}
+.ty>div{padding:18px 22px 22px;border-right:1px solid var(--line)}
+.ty>div:last-child{border-right:0}
+.ty .lab{font:900 .82rem/1.2 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--red);margin:0 0 8px}
+.ty .big{font:900 clamp(2rem,4vw,3.2rem)/1 var(--sans);letter-spacing:-.03em;color:var(--blue);margin:0}
+.ty .big b{color:var(--red)}
+.ty .mid{font:700 1.2rem/1.3 var(--sans);color:#151515;margin:10px 0 0}
+.ty .ser{font:400 1.14rem/1.55 var(--serif);color:#262626;margin:0}
+.ty small{display:block;font:500 .9rem/1.4 var(--sans);color:#444;margin-top:12px}
+.spec{border:1px solid #7E7E7E;background:#fff;margin-top:20px;padding:22px 24px 26px}
+.spec .k{font:900 clamp(.84rem,1.1vw,1rem)/1.25 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--red);margin:0 0 8px}
+.spec h3{font:900 clamp(1.9rem,4.2vw,3.5rem)/1 var(--sans);letter-spacing:-.034em;color:var(--blue);margin:0}
+.spec h3 b{color:var(--red)}
+.spec .dk{font:700 clamp(1.1rem,1.8vw,1.5rem)/1.26 var(--sans);color:#151515;margin:14px 0 0}
+.spec .dk mark{background:var(--yellow);padding:0 .14em}
+.spec .row{display:flex;flex-wrap:wrap;gap:16px 28px;align-items:center;margin-top:20px}
+.seal2{width:128px;height:128px;border-radius:50%!important;background:var(--red);color:#fff;display:flex;align-items:center;justify-content:center;text-align:center;transform:rotate(-11deg);border:4px solid #fff;outline:3px solid var(--red);font:900 .95rem/1.06 var(--sans);text-transform:uppercase;padding:12px}
+.tk{font:500 1.06rem/1.3 var(--sans);color:#151515;display:grid;gap:6px}
+.tk span{display:flex;gap:8px;align-items:center}
+.tk i{font-style:normal;color:var(--red);font-weight:900}
+.gl{background:var(--blue);color:#fff;border-top:5px solid var(--navy);display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:20px}
+.gl div{padding:12px 16px;border-left:1px solid rgba(255,255,255,.45)}
+.gl div:first-child{border-left:0}
+.gl span{display:block;font:500 .82rem/1.25 var(--sans);color:#E1ECF9}
+.gl b{display:block;font:900 1.2rem/1.12 var(--sans)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0;border:1px solid #7E7E7E;background:#fff;margin-top:20px}
+.two>div{padding:18px 22px 22px}
+.two>div:first-child{border-right:1px solid var(--line);border-top:8px solid var(--blue)}
+.two>div:last-child{border-top:8px solid var(--red)}
+.two h3{font:900 1.3rem/1.1 var(--sans);color:var(--navy);margin:0 0 8px}
+.two li{font:500 1.04rem/1.4 var(--sans);color:#151515;padding:7px 0;border-top:1px solid var(--line);list-style:none}
+.two ul{margin:0;padding:0}
+.use{border:1px solid #7E7E7E;background:#fff;margin-top:20px;border-collapse:collapse;width:100%;font-family:var(--sans)}
+.use th{background:var(--blue);color:#fff;text-align:left;font:900 .84rem/1.2 var(--sans);letter-spacing:.06em;text-transform:uppercase;padding:11px 14px}
+.use td{padding:12px 14px;border-top:1px solid var(--line);font:500 1.02rem/1.4 var(--sans);color:#151515;vertical-align:top}
+.use td:first-child{font-weight:900;white-space:nowrap;color:var(--navy)}
+@media(max-width:860px){.sws{grid-template-columns:repeat(2,minmax(0,1fr))}.ty,.two,.gl{grid-template-columns:minmax(0,1fr)}.ty>div,.two>div:first-child{border-right:0}.gl div{border-left:0;border-top:1px solid rgba(255,255,255,.45)}}
+@media print{.rnav{display:none}.rsec{break-inside:avoid}}
+</style>
+</head><body>
+<header class="rhead"><div class="rw">
+  <p class="k">Brand style sheet. Version 1, November 2026.</p>
+  <h1>The Look of the Company</h1>
+  <p class="d">Medical direct response: the look of a health newsletter or a local practice's mailer. A little dated, a little homemade, plainly trustworthy. Every page, ad, mailer and slide follows this sheet.</p>
+  <div class="rnav"><a href="../index.html">See it on the website</a><a href="../start/">See it on the ad page</a><a href="../headlines/">The 12 headlines</a></div>
+</div></header>
+<section class="rsec"><div class="rw">
+  <h2>The <b>Colours</b></h2>
+  <p class="d">Blue for what we say, red for what matters most, navy for weight, yellow as a marker pen. Nothing else.</p>
+  <div class="sws"><div class="sw"><div class="chip" style="background:#1B5FAE;color:#fff">#1B5FAE</div><p><b>Bulletin Blue</b>Headlines, mastheads, bands</p></div><div class="sw"><div class="chip" style="background:#C8102E;color:#fff">#C8102E</div><p><b>Signal Red</b>The words that matter most, buttons, check marks, the badge</p></div><div class="sw"><div class="chip" style="background:#0E2A52;color:#fff">#0E2A52</div><p><b>Navy</b>Heavy bands, the top strip, subheads</p></div><div class="sw"><div class="chip" style="background:#FFE66B;color:#111">#FFE66B</div><p><b>Highlighter</b>Behind a figure or a phrase, like a marker pen</p></div><div class="sw"><div class="chip" style="background:#FFD94A;color:#111">#FFD94A</div><p><b>Gold</b>Emphasis on blue and navy only</p></div><div class="sw"><div class="chip" style="background:#FFFFFF;color:#111">#FFFFFF</div><p><b>Paper</b>Most of every page</p></div><div class="sw"><div class="chip" style="background:#F5F3EA;color:#111">#F5F3EA</div><p><b>Off-White Paper</b>Every other section</p></div><div class="sw"><div class="chip" style="background:#151515;color:#fff">#151515</div><p><b>Ink</b>All reading copy</p></div></div>
+</div></section>
+<section class="rsec alt"><div class="rw">
+  <h2>The <b>Typefaces</b></h2>
+  <p class="d">Two families, both free to use anywhere. No italics.</p>
+  <div class="ty">
+    <div><p class="lab">Headlines, labels, buttons</p><p class="big">Libre Franklin <b>Black</b></p><p class="mid">Libre Franklin Bold for the line under a headline, and for every label and button.</p>
+      <small>A gothic of the kind American newspapers and mailers have used for a century. Set headlines tight and very large.</small></div>
+    <div><p class="lab">Reading copy</p><p class="ser"><b>Gelasio.</b> A plain book serif for everything a person reads at length: paragraphs, the letter, answers to questions. Bold lead-ins open a paragraph. Short paragraphs, generous line spacing, never smaller than 17 pixels on a screen or 10 points in print.</p>
+      <small>If neither is available: Franklin Gothic or Arial Black for headlines, Georgia for copy.</small></div>
+  </div>
+</div></section>
+<section class="rsec"><div class="rw">
+  <h2>The <b>Headline</b></h2>
+  <p class="d">A red line of capitals. A giant blue headline with the key words in red. A black line under it, with one figure in highlighter.</p>
+  <div class="spec">
+    <p class="k">Regenerative Medicine · Business Partnerships</p>
+    <h3>Doctor Seeks <b>Non-Doctor Partner</b> to Operate a Local Legal, Compliant Stem Cell Clinic</h3>
+    <p class="dk">Claim Your Share of the <mark>$7.5 Trillion</mark> Regenerative, Pain Management, Longevity and Anti-Aging Explosion!</p>
+    <div class="row"><p class="seal2" style="margin:0"><span>No medical license required</span></p>
+      <p class="tk" style="margin:0"><span><i>&#10003;</i> You own the business.</span><span><i>&#10003;</i> Clinicians handle the medicine.</span><span><i>&#10003;</i> Compliance is handled for you.</span></p>
+      <a class="go" href="../index.html" style="font-size:1.06rem;padding:15px 22px">See if I qualify</a></div>
+  </div>
+  <div class="gl"><div><span>Minimum partner investment</span><b>$100,000</b></div><div><span>Medical license</span><b>None required</b></div><div><span>Where</span><b>All 50 states</b></div><div><span>Partnerships</span><b>A limited number</b></div></div>
+</div></section>
+<section class="rsec alt"><div class="rw">
+  <h2>Always, and <b>Never</b></h2>
+  <div class="two"><div><h3>Always</h3><ul><li>White or off-white paper. Colour comes in solid bands and boxes.</li><li>One giant headline per page, in blue, with the key words in red.</li><li>A red line of capitals above the headline.</li><li>A real doctor in the first screen or on the cover, named in a caption.</li><li>Check marks, numbered boxes, tables with visible rules.</li><li>One red button, with the same words every time: See if I qualify.</li><li>Yellow highlighter behind one figure or phrase per screen.</li><li>Short paragraphs with bold lead-ins. Plenty to read.</li></ul></div><div><h3>Never</h3><ul><li>Dark pages, glowing gradients, glass panels.</li><li>Thin, elegant or futuristic lettering. Italics.</li><li>Rounded pills, floating cards, soft shadows.</li><li>Animation that plays by itself.</li><li>Stock art of cells, DNA or circuits.</li><li>Income figures, health promises, invented reviews.</li><li>Names that are not cleared. Other companies&#x27; logos or looks.</li></ul></div></div>
+</div></section>
+<section class="rsec"><div class="rw">
+  <h2>Where It <b>Goes</b></h2>
+  <table class="use"><thead><tr><th>Piece</th><th>How the look applies</th><th>Status</th></tr></thead><tbody>
+    <tr><td>Website</td><td>White paper, blue masthead bands on inner pages, the doctor and the badge in the first screen of the home page.</td><td>Done, all 72 pages</td></tr>
+    <tr><td>Ad landing page</td><td>Same headline style, the form as a reply coupon with a red top.</td><td>Done</td></tr>
+    <tr><td>Advertisements</td><td>One blue and red headline, one photograph or one fact, the badge, the red button. Look like a clipping or a mailer, never like an app.</td><td>Next</td></tr>
+    <tr><td>Regenerative Times</td><td>Keep its magazine typefaces inside. Bring the cover, the back cover and the ad pages into these colours.</td><td>To do</td></tr>
+    <tr><td>Presentation and videos</td><td>White slides, blue and red headlines, navy bands, the same badge.</td><td>To do</td></tr>
+    <tr><td>Logo</td><td>Waits for the name. It will be drawn in Bulletin Blue and Signal Red, in Franklin Black.</td><td>Waiting on the name</td></tr>
+  </tbody></table>
+</div></section>
+</body></html>

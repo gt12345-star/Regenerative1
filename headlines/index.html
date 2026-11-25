@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en" class="bul" data-theme="bulletin"><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Headlines, Page Order and Page Versions</title>
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+body{margin:0}
+.rw{max-width:1180px;margin:0 auto;padding:0 clamp(16px,4vw,40px)}
+.rhead{background:var(--blue);color:#fff;border-bottom:6px solid var(--navy);padding:clamp(24px,3.4vw,44px) 0}
+.rhead p.k{font:900 .86rem/1.2 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--gold);margin:0 0 10px}
+.rhead h1{color:#fff;font:900 clamp(2rem,4.4vw,3.6rem)/1 var(--sans);letter-spacing:-.03em;margin:0;max-width:18em}
+.rhead p.d{font:700 clamp(1.08rem,1.5vw,1.3rem)/1.36 var(--sans);color:#fff;margin:14px 0 0;max-width:46em}
+.rnav{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.rnav a{font:900 .98rem/1 var(--sans);color:var(--navy);background:#fff;text-decoration:none;padding:11px 15px;border:2px solid var(--navy)}
+.rnav a:hover{background:var(--tint-y)}
+.rsec{padding:clamp(30px,4.2vw,54px) 0;border-top:1px solid var(--line)}
+.rsec.alt{background:var(--paper2)}
+.rsec h2{font:900 clamp(1.6rem,3vw,2.4rem)/1.05 var(--sans);letter-spacing:-.026em;color:var(--blue);margin:0}
+.rsec h2 b{color:var(--red)}
+.rsec>.rw>p.d{font:700 1.12rem/1.4 var(--sans);color:#151515;margin:10px 0 0;max-width:48em}
+.rsec p{max-width:52em}
+.bul a.go{display:inline-block;font:900 .95rem/1 var(--sans);text-decoration:none;color:#fff;background:var(--red);border:2px solid #8F0A20;border-bottom-width:4px;padding:11px 14px;white-space:nowrap}
+.bul a.go:hover{background:#DD1F3F}
+.bul a.go.b{background:#fff;color:var(--blue);border:2px solid var(--blue)}
+.bul a.go.b:hover{background:var(--tint-b)}
+.bul .rnav a{color:var(--navy)}
+
+.hl{display:grid;grid-template-columns:74px minmax(0,1fr);gap:0 18px;padding:20px 0 22px;border-top:1px solid var(--line)}
+.hl .n{font:900 3rem/1 var(--sans);letter-spacing:-.04em;color:var(--red);margin:0}
+.hl .a{font:900 .84rem/1.3 var(--sans);letter-spacing:.07em;text-transform:uppercase;color:var(--navy);margin:0 0 6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center}
+.hl .ok,.hl .no{font:900 .74rem/1 var(--sans);letter-spacing:.04em;padding:5px 8px;text-transform:none}
+.hl .ok{background:var(--navy);color:#fff}.hl .no{background:var(--tint-y);color:#4A3B00;border:1px solid #D9C56B}
+.hl h3{font:900 clamp(1.4rem,2.6vw,2.1rem)/1.04 var(--sans);letter-spacing:-.026em;color:var(--blue);margin:0;max-width:26em}
+.hl .s{font:700 1.08rem/1.36 var(--sans);color:#151515;margin:8px 0 0;max-width:46em}
+.hl .src{font:500 .82rem/1.4 var(--sans);color:#555;margin:6px 0 0}
+.hl .why{font-size:1.02rem;color:#333;margin:8px 0 0}
+.hl .acts{display:flex;flex-wrap:wrap;gap:10px;margin:14px 0 0}
+.ord{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border:1px solid #7E7E7E;background:#fff;margin-top:20px}
+.ord>div{padding:16px 20px 20px;border-right:1px solid var(--line);border-top:8px solid var(--blue)}
+.ord>div:first-child{border-top-color:var(--red)}
+.ord>div:last-child{border-right:0}
+.ord h3{font:900 1.24rem/1.15 var(--sans);color:var(--navy);margin:0 0 4px}
+.ord p{font-size:1rem;margin:0 0 8px}
+.ord ol{margin:8px 0 14px;padding-left:1.4em;list-style:decimal;font:500 .98rem/1.45 var(--sans);color:#151515}
+.lpv{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid #7E7E7E;background:#fff;margin-top:20px}
+.lpv>div{padding:16px 18px 20px;border-right:1px solid var(--line)}
+.lpv>div:last-child{border-right:0}
+.lpv h3{font:900 1.14rem/1.15 var(--sans);color:var(--navy);margin:0 0 4px}
+.lpv p{font-size:1rem;margin:0 0 12px}
+@media(max-width:860px){.ord,.lpv{grid-template-columns:minmax(0,1fr)}.ord>div,.lpv>div{border-right:0;border-bottom:1px solid var(--line)}.hl{grid-template-columns:48px minmax(0,1fr)}.hl .n{font-size:2.1rem}}
+</style>
+</head><body>
+<header class="rhead"><div class="rw">
+  <p class="k">For review</p>
+  <h1>Headlines, Page Order and Page Versions</h1>
+  <p class="d">Twelve wordings of the first screen. Each one opens on the home page and on the ad landing page, so an ad and the page behind it can say the same thing. Reply with the numbers you approve.</p>
+  <div class="rnav"><a href="#headlines">The 12 headlines</a><a href="#order">The order of the home page</a><a href="#versions">Ad page versions</a><a href="../brand/">The brand style sheet</a></div>
+</div></header>
+<section class="rsec" id="headlines"><div class="rw">
+  <h2>The 12 <b>Headlines</b></h2>
+  <p class="d">Only approved numbers rotate on the home page. Today that is number 1 alone, so every visitor sees it. Approve more and each new visit shows one of them at random, and every form that comes in says which one that visitor saw.</p>
+  <article class="hl">
+  <p class="n">1</p>
+  <div><p class="a">The classified <span class="ok">Running now</span></p><h3>Doctor seeks non-doctor partner to operate a local legal, compliant stem cell clinic.</h3><p class="s">Claim your share of the $7.5 trillion regenerative, pain management, longevity and anti-aging explosion!</p><p class="src">Global wellness economy, 2025. Source: Global Wellness Institute.</p><p class="why">The wording on the site now.</p>
+    <p class="acts"><a class="go" href="../index.html?h=1">See it on the home page</a><a class="go b" href="../start/?h=1">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">2</p>
+  <div><p class="a">Ownership <span class="no">Not approved yet</span></p><h3>Own a healthcare business without a medical license.</h3><p class="s">Doctor seeks non-doctor partner to operate a local legal, compliant stem cell clinic. Physicians own the medicine. You own the business around it.</p><p class="why">Already the headline of the operators page.</p>
+    <p class="acts"><a class="go" href="../index.html?h=2">See it on the home page</a><a class="go b" href="../start/?h=2">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">3</p>
+  <div><p class="a">Who owns what <span class="no">Not approved yet</span></p><h3>Physicians own the medicine. You own the business around it.</h3><p class="s">Doctor seeks non-doctor partner to operate a local legal, compliant stem cell clinic. No medical license required.</p><p class="why">The line from the How It Works page, promoted to the headline.</p>
+    <p class="acts"><a class="go" href="../index.html?h=3">See it on the home page</a><a class="go b" href="../start/?h=3">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">4</p>
+  <div><p class="a">The market first <span class="no">Not approved yet</span></p><h3>Claim your share of the $7.5 trillion regenerative, pain management, longevity and anti-aging explosion!</h3><p class="s">Doctor seeks non-doctor partner to operate a local legal, compliant stem cell clinic. No medical license required.</p><p class="src">Global wellness economy, 2025. Source: Global Wellness Institute.</p><p class="why">Number 1 turned over: the market leads and the classified follows.</p>
+    <p class="acts"><a class="go" href="../index.html?h=4">See it on the home page</a><a class="go b" href="../start/?h=4">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">5</p>
+  <div><p class="a">Already built <span class="no">Not approved yet</span></p><h3>Everything a stem cell clinic needs is already built, except the owner.</h3><p class="s">The physician, the legal structure, the clinician network, the products, the training and the platform are in place. A non-doctor partner is wanted to open the office and run it.</p><p class="why">Leads with what is provided.</p>
+    <p class="acts"><a class="go" href="../index.html?h=5">See it on the home page</a><a class="go b" href="../start/?h=5">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">6</p>
+  <div><p class="a">What you skip <span class="no">Not approved yet</span></p><h3>Operate a local legal, compliant stem cell clinic without recruiting a single doctor.</h3><p class="s">Physician oversight, the legal structure for your state, the clinicians, the products, the training and the platform are already built. You open the office and run the business.</p><p class="why">Leads with the hardest part being done for them.</p>
+    <p class="acts"><a class="go" href="../index.html?h=6">See it on the home page</a><a class="go b" href="../start/?h=6">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">7</p>
+  <div><p class="a">The local name <span class="no">Not approved yet</span></p><h3>Become the local name people turn to for regenerative care.</h3><p class="s">Your name is on the sign. Licensed clinicians handle the medicine. The legal structure, the products, the training and the platform are already in place.</p><p class="why">The headline of the letter. Leads with what the partner becomes.</p>
+    <p class="acts"><a class="go" href="../index.html?h=7">See it on the home page</a><a class="go b" href="../start/?h=7">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">8</p>
+  <div><p class="a">The 65 and older count <span class="no">Not approved yet</span></p><h3>61.2 million Americans are 65 or older. Where would you open your office?</h3><p class="s">Doctor seeks non-doctor partner to operate a local legal, compliant stem cell clinic. No medical license required.</p><p class="src">U.S. population age 65 and older, 2024. Source: U.S. Census Bureau.</p><p class="why">Leads with the Census count.</p>
+    <p class="acts"><a class="go" href="../index.html?h=8">See it on the home page</a><a class="go b" href="../start/?h=8">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">9</p>
+  <div><p class="a">Partners wanted, terms up front <span class="no">Not approved yet</span></p><h3>Partners wanted to operate local stem cell clinics. No medical license required.</h3><p class="s">Physician oversight, the legal structure for your state, the clinicians, the products, the training and the platform are provided. The minimum partner investment is $100,000. We are placing a limited number of partnerships.</p><p class="why">States the investment in the first screen, so fewer unqualified people continue.</p>
+    <p class="acts"><a class="go" href="../index.html?h=9">See it on the home page</a><a class="go b" href="../start/?h=9">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">10</p>
+  <div><p class="a">Turnkey <span class="no">Not approved yet</span></p><h3>A complete turnkey system for operating a local stem cell clinic.</h3><p class="s">You run the business side. Licensed medical professionals handle the medicine. We provide the system. No medical license required.</p><p class="why">From the section the team liked.</p>
+    <p class="acts"><a class="go" href="../index.html?h=10">See it on the home page</a><a class="go b" href="../start/?h=10">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">11</p>
+  <div><p class="a">The short classified <span class="no">Not approved yet</span></p><h3>Doctor seeking non-doctor partner to operate stem cell clinic.</h3><p class="s">The clinic is local, legal and compliant. Physicians own the medicine. You own the business around it. No medical license required.</p><p class="why">The core ad line, word for word. Shorter than number 1.</p>
+    <p class="acts"><a class="go" href="../index.html?h=11">See it on the home page</a><a class="go b" href="../start/?h=11">See it on the ad page</a></p></div>
+</article><article class="hl">
+  <p class="n">12</p>
+  <div><p class="a">A limited number <span class="no">Not approved yet</span></p><h3>A limited number of stem cell clinic partnerships are open in all 50 states.</h3><p class="s">Doctor seeks non-doctor partner to operate a local legal, compliant stem cell clinic. No medical license required. The minimum partner investment is $100,000.</p><p class="why">Leads with the limit.</p>
+    <p class="acts"><a class="go" href="../index.html?h=12">See it on the home page</a><a class="go b" href="../start/?h=12">See it on the ad page</a></p></div>
+</article>
+</div></section>
+<section class="rsec alt" id="order"><div class="rw">
+  <h2>The Order of <b>the Home Page</b></h2>
+  <p class="d">The same sections in three orders. The first is live. The other two open from their buttons so you can compare.</p>
+  <div class="ord">
+    <div><h3>1. The deal first (live)</h3><p>What it is, why it can be trusted, the opportunity, the tools, then the letter and the form.</p><ol><li>First screen</li><li>The turnkey system</li><li>No medical license: who does what</li><li>The hard part is already done</li><li>The medical director</li><li>The clinical team</li><li>Compliance is handled</li><li>The market</li><li>What patients come for</li><li>The Longevity Chamber™</li><li>The platform</li><li>Two kinds of owners</li><li>The letter</li><li>Nothing is signed until</li><li>Questions</li><li>The form</li></ol><a class="go" href="../index.html?o=1">Open this order</a></div>
+    <div><h3>2. The letter first</h3><p>The letter comes straight after the first screen, as in a mailed sales letter.</p><ol><li>First screen</li><li>The letter</li><li>The turnkey system</li><li>No medical license: who does what</li><li>The hard part is already done</li><li>The medical director</li><li>The clinical team</li><li>Compliance is handled</li><li>The market</li><li>What patients come for</li><li>The Longevity Chamber™</li><li>The platform</li><li>Two kinds of owners</li><li>Nothing is signed until</li><li>Questions</li><li>The form</li></ol><a class="go b" href="../index.html?o=2">Open this order</a></div>
+    <div><h3>3. The order until November 24</h3><p>Kept so you can see what changed.</p><ol><li>First screen</li><li>The turnkey system</li><li>The letter</li><li>The market</li><li>No medical license: who does what</li><li>The clinical team</li><li>What patients come for</li><li>The Longevity Chamber™</li><li>The hard part is already done</li><li>The medical director</li><li>The platform</li><li>Compliance is handled</li><li>Two kinds of owners</li><li>Nothing is signed until</li><li>Questions</li><li>The form</li></ol><a class="go b" href="../index.html?o=0">Open this order</a></div>
+  </div>
+</div></section>
+<section class="rsec" id="versions"><div class="rw">
+  <h2>Ad Landing Page <b>Versions</b></h2>
+  <p class="d">Four layouts of the ad page. Any headline number works with any layout: add both to the link, for example /start/?v=list&amp;h=5.</p>
+  <div class="lpv">
+    <div><h3>Standard</h3><p>Headline and form, what you gain, what is built, questions.</p><a class="go" href="../start/">Open</a></div>
+    <div><h3>Short</h3><p>Headline, form, next steps and questions only.</p><a class="go b" href="../start/?v=short">Open</a></div>
+    <div><h3>List</h3><p>What is already built comes first.</p><a class="go b" href="../start/?v=list">Open</a></div>
+    <div><h3>Letter</h3><p>The letter, then the form.</p><a class="go b" href="../start/?v=letter">Open</a></div>
+  </div>
+</div></section>
+</body></html>
