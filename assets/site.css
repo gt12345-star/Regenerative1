@@ -2264,7 +2264,7 @@ html.js .st-list.fit li:nth-child(n+9){display:none}
 .bul .brand *{animation:none!important}
 .bul .split .w,.bul .split .w>span{transform:none!important;opacity:1!important;transition:none!important}
 .bul [data-r],.bul [data-in],.bul [data-stagger]>*{opacity:1!important;transform:none!important;translate:none!important;scale:none!important;transition:none!important}
-.bul *:not(.cham-photo):not(.pick):not(.ckb):not(.play),.bul *::before,.bul *::after{background-image:none!important}
+.bul *:not(.cham-photo):not(.pick):not(.ckb):not(.play):not(.hero):not(.band):not(footer),.bul *::before,.bul *::after{background-image:none!important}
 
 /* ---------- type ---------- */
 .bul body{background:#fff;color:var(--body);font-family:var(--serif);font-size:1.125rem;line-height:1.55;font-weight:400;letter-spacing:0}
@@ -2723,6 +2723,32 @@ html.bul[data-prelaunch] body::before{background:var(--tint-y);color:#4A3B00;bor
   .bul .dr-proof li:nth-child(odd){padding-left:0;border-left:0}
   .bul .dr-seal{width:104px;height:104px;font-size:.7rem;right:-30px;top:-16px}
 }
+
+/* ============================================================================================================
+   REFRESH (November 24): a little more up to date, and less bare white. Soft blue washes behind the white parts,
+   gentle depth in the coloured bands, rounded corners and light shadows on the boxes. The look itself is unchanged.
+   ============================================================================================================ */
+.bul{--soft:0 1px 2px rgba(14,42,82,.06),0 16px 36px -24px rgba(14,42,82,.38)}
+.bul .hero.dr-hero{background:linear-gradient(180deg,#E6F0FB 0%,#F2F7FD 46%,#fff 100%)}
+.bul .band.white{background-color:#fff;background-image:radial-gradient(760px 400px at 100% 0%,rgba(23,82,154,.085),transparent 70%),radial-gradient(640px 360px at 0% 100%,rgba(23,82,154,.05),transparent 70%)}
+.bul .band.light,.bul .band.lav,.bul .letter-band{background-color:var(--paper2);background-image:linear-gradient(180deg,#EDF3FA 0%,#F5F8FC 100%)}
+.bul .band.dark,.bul .ctaband{background-color:var(--navy);background-image:linear-gradient(155deg,#0C2548 0%,#12366A 100%)}
+.bul .band.numbers,.bul .band.statement,.bul .hero.dark{background-color:var(--blue);background-image:linear-gradient(155deg,#134684 0%,#1C61B4 100%)}
+.bul .band{border-top:0}
+.bul footer{background-image:none}
+.bul .top{box-shadow:0 8px 22px -16px rgba(14,42,82,.5)!important;border-bottom-width:2px}
+.bul .btn,.bul .fld input,.bul .fld select,.bul .fld textarea{border-radius:8px!important}
+.bul .taps.dr-boxes,.bul .steps3,.bul .tl ol,.bul .aud,.bul .letter,.bul .form,.bul .cert,.bul .kept,.bul .dr-doc,.bul .md-ph,.bul .card,.bul .note,.bul .linebox,.bul .mk,.bul .plate.mod,.bul .node,.bul .pbase,.bul .drop-p{border-radius:12px!important;overflow:hidden}
+.bul .plate.mod{border-radius:12px 12px 0 0!important}
+.bul .plate.floor{border-radius:0 0 12px 12px!important}
+.bul .taps.dr-boxes,.bul .steps3,.bul .tl ol,.bul .aud,.bul .card,.bul .kept,.bul .cmp{box-shadow:var(--soft)!important}
+.bul .cmp{border-collapse:separate;border-spacing:0;border-radius:12px!important;overflow:hidden}
+.bul .cmp thead th:first-child{border-radius:11px 0 0 0!important}
+.bul .cmp thead th:last-child{border-radius:0 11px 0 0!important}
+.bul .dr-glance{background-image:linear-gradient(155deg,#134684 0%,#1C61B4 100%)}
+.bul .dr-seal{box-shadow:inset 0 0 0 3px var(--gold),0 10px 22px -10px rgba(14,42,82,.6)!important}
+.bul .dr-proof b{color:var(--blue)}
+.bul .nx-a,.bul .plus{border-radius:6px!important}
 
 /* pages change the plain way: no cross-fade between them */
 @view-transition{navigation:none}
