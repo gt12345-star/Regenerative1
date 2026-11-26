@@ -447,6 +447,11 @@ html.intro-on .hero [data-r]{transition-delay:calc(var(--i,0)*80ms + var(--intro
   em.hl{background:none !important;-webkit-text-fill-color:var(--g3) !important;color:var(--g3) !important;filter:none !important;animation:none !important}
 }
 
+/* the wordmark (November 25) */
+.brand-logo{display:block;width:auto;height:44px}
+footer .brand-logo{height:52px}
+@media(max-width:760px){.brand-logo{height:36px}footer .brand-logo{height:46px}}
+
 /* ================= home hero ================= */
 .hero-home canvas.cells{-webkit-mask-image:radial-gradient(60% 44% at 50% 25%,transparent 0 44%,#000000 96%);mask-image:radial-gradient(60% 44% at 50% 25%,transparent 0 44%,#000000 96%)}
 .hero-top{display:flex;flex-direction:column;align-items:center;text-align:center;padding-top:clamp(26px,3.2vw,46px);transform:translateY(calc(var(--hp,0)*-44px));opacity:calc(1 - var(--hp,0)*.82)}
@@ -2800,8 +2805,9 @@ html.bul[data-prelaunch] body::before{background:var(--tint-y);color:#4A3B00;bor
 /* the bar, the buttons */
 .fresh .top{border-bottom:0;box-shadow:0 1px 0 var(--line)!important}
 .fresh .top-in{height:76px}
-.fresh .brand-t{font-weight:800;letter-spacing:-.016em}
-.fresh .brand-t small{font-weight:800}
+.fresh .brand-logo{height:50px}
+.fresh footer .brand-logo{height:56px}
+@media(max-width:760px){.fresh .brand-logo{height:42px}.fresh footer .brand-logo{height:50px}}
 .fresh .nav>a,.fresh .drop>button{font-weight:700}
 .fresh .btn{font-weight:800;border-radius:8px!important;border:0;padding:15px 24px;letter-spacing:.005em}
 .fresh .btn.primary{background:var(--red);border:0}
@@ -2836,7 +2842,6 @@ html.bul[data-prelaunch] body::before{background:var(--tint-y);color:#4A3B00;bor
 .fresh .fr-deck b{font-weight:800;color:var(--red);white-space:nowrap}
 .fresh .fr-hero .cta{margin-top:28px}
 .fresh .fr-hero .cta .btn{font-size:1.12rem;padding:19px 34px}
-.fresh .fr-hsrc{font-size:.76rem;line-height:1.4;color:var(--muted);margin-top:14px}
 .fresh .fr-hand{font:700 clamp(1.75rem,3vw,2.5rem)/1.06 var(--hand);color:var(--ink-t);transform:rotate(-2deg)!important;transform-origin:0 50%;max-width:15em}
 .fresh .fr-stage{position:relative;justify-self:center;width:min(100%,440px);aspect-ratio:440/500;margin:0}
 .fresh .fr-halo{position:absolute;left:50%;top:10%;width:106%;aspect-ratio:1;transform:translateX(-50%);border-radius:50%!important;background:#C3D9F3}
