@@ -2784,3 +2784,5 @@ html.bul[data-prelaunch] body::before{background:var(--tint-y);color:#4A3B00;bor
 .bul .top .btn{white-space:nowrap}
 /* with scripts off the header keeps its white ground (the first look's dark glass rule in base.css outranked this look's) */
 html.no-js.bul .top{background:#fff}
+/* on a phone the header button gives way to the bar at the foot (the landing pages have no menu button, so the longer label crowded the logo there) */
+@media (max-width:480px){.bul .top .btn{display:none}}

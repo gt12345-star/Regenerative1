@@ -9,7 +9,8 @@
   /* a name typed on the old sign earlier in this visit is forgotten */
   try { w.sessionStorage.removeItem('rsp-sign'); } catch (e) {}
 
-  /* one-time movement when a part first comes into view */
+  /* one-time movement when a part first comes into view. The waiting state is styled under html.see, so it exists only once this script runs. */
+  d.documentElement.classList.add('see');
   var seen = [].slice.call(d.querySelectorAll('[data-see]'));
   if (seen.length) {
     if ('IntersectionObserver' in w) {
