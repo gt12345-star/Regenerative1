@@ -2787,7 +2787,10 @@ html.no-js.bul .top{background:#fff}
 /* on a phone the header button gives way to the bar at the foot (the landing pages have no menu button, so the longer label crowded the logo there) */
 @media (max-width:480px){.bul .top .btn{display:none}}
 /* compliance, "What we take care of": nine short boxes sit three by three (the automatic fit left one alone on a third row) */
-@media (min-width:761px){.bul #layers .taps.dr-boxes{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (min-width:761px){.bul #layers .taps.dr-boxes,.bul #types .taps.dr-boxes{grid-template-columns:repeat(3,minmax(0,1fr))}}      /* #types: six practice kinds, three by two */
+/* the menu board's Longevity Chamber row has no list beside it now (November 26), so its text takes the full width */
+.bul .mtier.t-e{grid-template-columns:minmax(0,1fr)}
+.bul .mtier.t-e header>p:last-child{max-width:44em}
 
 /* ============================================================================================================
    FRESH  ·  Design 2 (November 24). Simple and friendly: a short home page, tall condensed section labels, a blue line
@@ -3184,14 +3187,36 @@ html.no-js.bul .top{background:#fff}
 .fresh .p-cham-pic{position:relative;z-index:1;width:min(100%,720px);margin:calc(min(100cqw,720px)*-.118) auto calc(min(100cqw,720px)*-.115)}
 .fresh .p-cham-pic img{position:relative;display:block;width:100%;height:auto}
 .fresh .p-cham-floor{position:absolute;left:8%;right:8%;bottom:14%;height:15%;border-radius:50%!important;background-image:radial-gradient(closest-side,rgba(255,70,80,.5),rgba(255,70,80,0))}
-.fresh .p-cham .p-sub{position:relative;z-index:2;color:#fff}
-.fresh .p-facts{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:1000px;margin:clamp(20px,2.4vw,30px) auto 0;padding:0;list-style:none}
-.fresh .p-facts li{padding:4px clamp(12px,2.4vw,30px)}
-.fresh .p-facts li+li{border-left:1px solid rgba(255,255,255,.3)}
-.fresh .p-facts b{display:block;font:400 clamp(2.2rem,4.3vw,3.6rem)/.92 var(--label);letter-spacing:.02em;text-transform:uppercase;color:#fff}
-.fresh .p-facts span{display:block;font:700 .96rem/1.35 var(--sans);color:#F6CFD4;margin-top:8px;text-wrap:balance}
+.fresh .p-cham .p-sub,.fresh .p-sub.p-white{position:relative;z-index:2;color:#fff}
 .fresh .p-link{font:800 1rem/1 var(--sans);color:#fff;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px;text-decoration-color:var(--red)}
 .fresh .p-link:hover{text-decoration-color:#fff}
+
+/* what the office offers, as posters: a blue one for the care, a black one with the chamber's red light */
+.fresh .p-menu{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(14px,2vw,24px);margin-top:clamp(20px,2.8vw,34px)}
+.fresh .p-mi{position:relative;overflow:hidden;border-radius:22px!important;padding:clamp(26px,3.6vw,48px);color:#fff}
+.fresh .p-mi.care{background:var(--blue)}
+.fresh .p-mi.cham{background:#07070C}
+.fresh .p-mi-glow{position:absolute;right:-34%;bottom:-66%;width:124%;aspect-ratio:1;pointer-events:none;background-image:radial-gradient(closest-side,rgba(236,30,56,.72),rgba(150,10,30,.3) 50%,rgba(7,7,12,0) 100%)}
+.fresh .p-mi>div{position:relative}
+.fresh .p-mi .p-eye{text-align:left;color:var(--gold3);margin-bottom:12px}
+.fresh .p-mi.cham .p-eye{color:#FFC2CA}
+.fresh .p-mi .p-stack .fit{font-size:calc(40vw/var(--w));font-size:calc(100cqw/var(--w))}
+.fresh .p-mi-l{font:800 clamp(1.14rem,1.7vw,1.42rem)/1.3 var(--sans);letter-spacing:-.016em;color:#fff;margin-top:clamp(14px,2vw,22px);max-width:22em;text-wrap:balance}
+.fresh .p-mi-f{display:grid;gap:9px;margin:16px 0 0;padding:0;list-style:none}
+.fresh .p-mi-f li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:10px;align-items:center;font:800 1.04rem/1.25 var(--sans);color:#fff}
+.fresh .p-mi-f .ic{width:22px;height:22px;color:var(--gold3);stroke-width:3.4}
+.fresh .p-menu.one{grid-template-columns:minmax(0,1fr)}
+.fresh .p-menu.one .p-mi{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.86fr);gap:clamp(24px,5vw,76px);align-items:center;padding:clamp(30px,4.8vw,68px)}
+.fresh .p-menu.one .p-mi-l{margin-top:0;font-size:clamp(1.3rem,2.3vw,1.95rem)}
+.fresh .p-menu.one .p-mi-f li{font-size:1.14rem}
+
+/* how a patient reaches care: four tall numerals on blue */
+.fresh .band.p-flow{border:0;background:#134684;background-image:linear-gradient(180deg,#1B5CAC,#134684)}
+.fresh .p-steps.four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.fresh .p-flow .p-steps li{border-top-color:var(--gold3)}
+.fresh .p-flow .p-steps li::before{color:var(--gold3);font-size:clamp(4.4rem,7.6vw,6.8rem)}
+.fresh .p-flow .p-steps h3{font:400 clamp(1.7rem,2.6vw,2.3rem)/.96 var(--label);letter-spacing:.02em;text-transform:uppercase;color:#fff;margin-top:12px}
+.fresh .p-flow .p-steps p{color:#DCE9F8;font-size:1.04rem;margin-top:8px}
 
 /* two kinds of owners: two big words, a line under each */
 .fresh .p-who-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:clamp(24px,3.4vw,44px)}
@@ -3217,6 +3242,12 @@ html.no-js.bul .top{background:#fff}
 .fresh .ctaband .h2 .fit{color:#fff}
 
 @media(max-width:940px){
+  .fresh .p-steps.four{grid-template-columns:minmax(0,1fr)}
+  .fresh .p-flow .p-steps li,.fresh .p-flow .p-steps li:first-child{border-top:1px solid rgba(255,255,255,.3)}
+  .fresh .p-flow .p-steps li:first-child{border-top:4px solid var(--gold3)}
+  .fresh .p-flow .p-steps li::before{font-size:4rem}
+  .fresh .p-menu.one .p-mi{grid-template-columns:minmax(0,1fr)}
+  .fresh .p-menu.one .p-mi-l{margin-top:clamp(14px,2vw,22px)}
   .fresh .p-built-g{grid-template-columns:minmax(0,1fr);grid-template-areas:"h" "l" "c";gap:clamp(22px,4vw,30px)}
   .fresh .p-built-h{align-self:auto}
   .fresh .p-steps{grid-template-columns:minmax(0,1fr);gap:0}
@@ -3237,10 +3268,9 @@ html.no-js.bul .top{background:#fff}
   .fresh .p-half.biz{background:var(--red);padding-top:clamp(52px,13vw,68px)}
   .fresh .p-half .fit{font-size:calc(86vw/var(--w));font-size:calc(100cqw/var(--w))}
   .fresh .p-plus{right:auto;left:calc(50% - 32px);top:auto;bottom:-32px;width:64px;height:64px;font-size:2.1rem}
-  .fresh .p-facts{grid-template-columns:minmax(0,1fr);gap:0;max-width:340px}
-  .fresh .p-facts li{padding:16px 0}
-  .fresh .p-facts li+li{border-left:0;border-top:1px solid rgba(255,255,255,.3)}
   .fresh .p-cham .p-sub{text-align:center;margin-left:auto}
+  .fresh .p-menu{grid-template-columns:minmax(0,1fr)}
+  .fresh .p-mi .p-stack .fit{font-size:calc(78vw/var(--w));font-size:calc(100cqw/var(--w))}
   .fresh .p-who-g{grid-template-columns:minmax(0,1fr)}
   .fresh .p-aud{padding:6px 0 26px}
   .fresh .p-aud+.p-aud{border-left:0;border-top:2px solid var(--line);padding:26px 0 0}
