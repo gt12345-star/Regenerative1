@@ -1086,7 +1086,7 @@ legend{padding:0}
 .role header{position:relative;display:flex;flex-direction:column;min-height:178px;padding:28px 28px 24px;color:#FFFFFF;background:linear-gradient(140deg,#112758,#091531);overflow:hidden}
 .role header h3{margin-top:auto}
 .role.you header{background:linear-gradient(140deg,#DF274A,#B61230)}
-.role.md header{background:linear-gradient(140deg,#378783,#196768)}
+.role.phys header{background:linear-gradient(140deg,#378783,#196768)}
 .role header .ico{color:#FFFFFF;background:rgba(255,255,255,.18);box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);margin-bottom:22px}
 .role header .gnum{right:16px;top:14px;font-size:4.6rem;-webkit-text-stroke-color:rgba(255,255,255,.3)}
 .role h3{font-weight:620;font-size:1.42rem;line-height:1.1;letter-spacing:-.02em}
@@ -2753,3 +2753,17 @@ html.bul[data-prelaunch] body::before{background:var(--tint-y);color:#4A3B00;bor
 /* pages change the plain way: no cross-fade between them */
 @view-transition{navigation:none}
 .bul .top{view-transition-name:none}
+
+/* ---------- November 25: the investment block is a heading over one card (its paragraph and its "does not cover" list were taken out) ---------- */
+.bul .cols2.invest{grid-template-columns:minmax(0,1fr);justify-items:center;text-align:center;gap:clamp(18px,2.4vw,28px)}
+.bul .invest .cert{width:100%;max-width:500px;text-align:left}
+
+/* an open question or drawer: the box fills navy and shows a minus. (Before this the open mark was white on white: an empty diamond.) */
+.bul details[open]>summary .plus{transform:none;background:var(--navy)}
+.bul details[open]>summary .plus::before{background:#fff}
+.bul details[open]>summary .plus::after{display:none}
+
+/* the three-party scene does not hold still while scrolling in this look, so it does not need the room that was left for that */
+.bul .story-pin{padding-top:0;padding-bottom:0}
+.bul .story-band .story-after{padding-top:0!important;padding-bottom:0!important}
+.bul .story-after>*{margin-top:28px}
