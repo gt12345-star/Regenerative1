@@ -2772,3 +2772,15 @@ html.bul[data-prelaunch] body::before{background:var(--tint-y);color:#4A3B00;bor
 .bul .story-pin{padding-top:0;padding-bottom:0}
 .bul .story-band .story-after{padding-top:0!important;padding-bottom:0!important}
 .bul .story-after>*{margin-top:28px}
+
+/* the bar at the foot of a phone: the button's words stay on one line. On a narrow phone the button is the whole bar. (November 26: the button now says TAKE THE NEXT STEP.) */
+.bul .dock .btn{flex:none;white-space:nowrap}
+.bul .dock p{flex:1 1 0;min-width:0}
+@media (max-width:480px){
+  .bul .dock{padding:8px}
+  .bul .dock p{display:none}
+  .bul .dock .btn{flex:1 1 auto;width:100%;justify-content:center}
+}
+.bul .top .btn{white-space:nowrap}
+/* with scripts off the header keeps its white ground (the first look's dark glass rule in base.css outranked this look's) */
+html.no-js.bul .top{background:#fff}
