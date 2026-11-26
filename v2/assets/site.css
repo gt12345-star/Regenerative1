@@ -2786,6 +2786,8 @@ html.bul[data-prelaunch] body::before{background:var(--tint-y);color:#4A3B00;bor
 html.no-js.bul .top{background:#fff}
 /* on a phone the header button gives way to the bar at the foot (the landing pages have no menu button, so the longer label crowded the logo there) */
 @media (max-width:480px){.bul .top .btn{display:none}}
+/* compliance, "What we take care of": nine short boxes sit three by three (the automatic fit left one alone on a third row) */
+@media (min-width:761px){.bul #layers .taps.dr-boxes{grid-template-columns:repeat(3,minmax(0,1fr))}}
 
 /* ============================================================================================================
    FRESH  ·  Design 2 (November 24). Simple and friendly: a short home page, tall condensed section labels, a blue line
@@ -2975,7 +2977,8 @@ html.no-js.bul .top{background:#fff}
 .fresh .fr-stick b{display:block;font:800 clamp(1.45rem,2.3vw,2rem)/1 var(--sans);letter-spacing:-.03em;color:var(--blue)}
 .fresh .fr-stick span{display:block;font:700 .86rem/1.3 var(--sans);color:var(--ink-t);margin-top:6px}
 .fresh .fr-stmt .fr-src{color:#B9CBE2;margin-top:clamp(18px,2.4vw,28px)}
-.fresh .fr-stmt .btn{margin-top:20px}
+.fresh .fr-stmt .btn{margin-top:22px}
+.fresh .fr-stmt-l{font-size:clamp(1.9rem,3.6vw,3rem)}
 
 /* already built: the list on a clipboard */
 .fresh .fr-board{justify-self:center;width:100%;max-width:520px;background:var(--navy);border-radius:22px!important;padding:46px 20px 20px;transform:rotate(1.4deg)!important;box-shadow:0 34px 54px -36px rgba(14,42,82,.9)!important}
@@ -3172,6 +3175,24 @@ html.no-js.bul .top{background:#fff}
 .fresh.see [data-see] .p-ticks .ic{transition:opacity .2s ease,transform .45s cubic-bezier(.2,1.7,.4,1);transition-delay:calc(var(--n,0)*70ms + .2s)}
 .fresh.see [data-see]:not(.in) .p-ticks .ic{opacity:0;transform:scale(.25) rotate(-25deg)}
 
+/* the Longevity Chamber: the lit bed in the dark, under its own name. The one black ground on the site: the product glows. */
+.fresh .band.p-cham{position:relative;overflow:hidden;padding:clamp(48px,5vw,68px) 0 clamp(46px,4.6vw,64px);background:#07070C;background-image:none;color:#fff;text-align:center}
+.fresh .p-cham-glow{position:absolute;left:50%;top:52%;width:min(1700px,170vw);aspect-ratio:1.5;transform:translate(-50%,-50%);pointer-events:none;background-image:radial-gradient(closest-side,rgba(236,30,56,.6),rgba(150,10,30,.3) 46%,rgba(7,7,12,0) 100%);animation:fr-breathe 5.5s ease-in-out infinite}
+.fresh .p-cham>.wrap{position:relative}
+.fresh .p-eye{font:800 .84rem/1.3 var(--sans);letter-spacing:.14em;text-transform:uppercase;color:#FFC2CA;margin-bottom:clamp(10px,1.4vw,18px)}
+.fresh .p-cham .p-h{color:#fff}
+.fresh .p-cham-pic{position:relative;z-index:1;width:min(100%,720px);margin:calc(min(100cqw,720px)*-.118) auto calc(min(100cqw,720px)*-.115)}
+.fresh .p-cham-pic img{position:relative;display:block;width:100%;height:auto}
+.fresh .p-cham-floor{position:absolute;left:8%;right:8%;bottom:14%;height:15%;border-radius:50%!important;background-image:radial-gradient(closest-side,rgba(255,70,80,.5),rgba(255,70,80,0))}
+.fresh .p-cham .p-sub{position:relative;z-index:2;color:#fff}
+.fresh .p-facts{position:relative;z-index:2;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:1000px;margin:clamp(20px,2.4vw,30px) auto 0;padding:0;list-style:none}
+.fresh .p-facts li{padding:4px clamp(12px,2.4vw,30px)}
+.fresh .p-facts li+li{border-left:1px solid rgba(255,255,255,.3)}
+.fresh .p-facts b{display:block;font:400 clamp(2.2rem,4.3vw,3.6rem)/.92 var(--label);letter-spacing:.02em;text-transform:uppercase;color:#fff}
+.fresh .p-facts span{display:block;font:700 .96rem/1.35 var(--sans);color:#F6CFD4;margin-top:8px;text-wrap:balance}
+.fresh .p-link{font:800 1rem/1 var(--sans);color:#fff;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:2px;text-decoration-color:var(--red)}
+.fresh .p-link:hover{text-decoration-color:#fff}
+
 /* two kinds of owners: two big words, a line under each */
 .fresh .p-who-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);margin-top:clamp(24px,3.4vw,44px)}
 .fresh .p-aud{display:block;container-type:inline-size;padding:clamp(4px,1vw,12px) clamp(22px,4.6vw,66px) clamp(4px,1vw,12px) 0;color:inherit;text-decoration:none}
@@ -3190,6 +3211,7 @@ html.no-js.bul .top{background:#fff}
 .fresh .p-steps p{font-size:1rem;line-height:1.45;color:var(--body);margin-top:6px}
 
 .fresh .p-go{text-align:center;margin:clamp(28px,3.6vw,46px) 0 0}
+.fresh .p-cham .p-go{margin-top:clamp(20px,2.4vw,30px)}
 /* the closing band: the button's own words, as large as the column */
 .fresh .ctaband .cta-grid>div:first-child{container-type:inline-size}
 .fresh .ctaband .h2 .fit{color:#fff}
@@ -3215,6 +3237,10 @@ html.no-js.bul .top{background:#fff}
   .fresh .p-half.biz{background:var(--red);padding-top:clamp(52px,13vw,68px)}
   .fresh .p-half .fit{font-size:calc(86vw/var(--w));font-size:calc(100cqw/var(--w))}
   .fresh .p-plus{right:auto;left:calc(50% - 32px);top:auto;bottom:-32px;width:64px;height:64px;font-size:2.1rem}
+  .fresh .p-facts{grid-template-columns:minmax(0,1fr);gap:0;max-width:340px}
+  .fresh .p-facts li{padding:16px 0}
+  .fresh .p-facts li+li{border-left:0;border-top:1px solid rgba(255,255,255,.3)}
+  .fresh .p-cham .p-sub{text-align:center;margin-left:auto}
   .fresh .p-who-g{grid-template-columns:minmax(0,1fr)}
   .fresh .p-aud{padding:6px 0 26px}
   .fresh .p-aud+.p-aud{border-left:0;border-top:2px solid var(--line);padding:26px 0 0}
@@ -3222,7 +3248,7 @@ html.no-js.bul .top{background:#fff}
 
 /* anyone who asks their device for less motion gets a still page */
 @media (prefers-reduced-motion:reduce){
-  .fresh .fr-glow,.fresh.js .fr-seal,.fresh.js .fr-swash{animation:none!important}
+  .fresh .fr-glow,.fresh .p-cham-glow,.fresh.js .fr-seal,.fresh.js .fr-swash{animation:none!important}
   .fresh.see .fr-stmt:not(.in) .fr-stmt-n b,.fresh.see .fr-board:not(.in) .fr-done .ic,.fresh.see [data-see]:not(.in) .p-ticks .ic{transform:none;opacity:1}
   .fresh.see [data-see] .fit,.fresh.see [data-see]:not(.in) .fit{transition:none;transform:none;clip-path:none}
   .fresh.js .fr-l1,.fresh.js .fr-l2{animation:none!important}

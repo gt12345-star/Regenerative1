@@ -2786,3 +2786,5 @@ html.bul[data-prelaunch] body::before{background:var(--tint-y);color:#4A3B00;bor
 html.no-js.bul .top{background:#fff}
 /* on a phone the header button gives way to the bar at the foot (the landing pages have no menu button, so the longer label crowded the logo there) */
 @media (max-width:480px){.bul .top .btn{display:none}}
+/* compliance, "What we take care of": nine short boxes sit three by three (the automatic fit left one alone on a third row) */
+@media (min-width:761px){.bul #layers .taps.dr-boxes{grid-template-columns:repeat(3,minmax(0,1fr))}}
